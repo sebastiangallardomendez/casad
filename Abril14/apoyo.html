@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <title>Document</title>
+    <script>
+        function crearcarta(){
+            var genero="";
+            var a=document.getElementById("rut").value;
+            var b=document.getElementById("nom").value;
+            var c=document.getElementById("Ap").value;
+            var d=document.getElementById("Am").value;
+            var e=document.getElementById("dates").value;
+            var f=document.getElementById("edad").value;
+            var g=parseInt(document.getElementById("genero").value);
+            var h=document.getElementById("celular").value;
+            
+            if(g===1){
+                genero='mujer';
+            }
+            if(g===2){
+                genero='Hombre';
+            }
+            if(g===3){
+                genero='otro';
+            }
+            if(g===4){
+                genero='Terreneitor el Auto que todo Hombre quiere'
+            }
+            
+            var cadena= "Postulacion: \n"
+            +"rut: " + a + "\n" + "Nombre: " + b + "\n" + "Apellido P: " + c + "\n" + "Apellido M: " + d + "\n" + "Nacimiento: " + e + "\n" + "edad: " + f + "\n"
+            + "Genero: " + genero + "\n" + "Celular: " + h;
+            document.getElementById("carta").value=cadena;
+        }
+    </script>
+</head>
+<body>
+    <style>
+        body{
+            background: #f2f2
+        }
+        
+    </style>
+    <div class="container">
+        <h2>Postulacion</h2>
+        <form action="#"method="post" name="datos">
+            <div class="form-group">
+                <label for="rut">rut: </label><br>
+                <input type="number" id="rut" name="rut" required  minlength="9" maxlength="10"
+                     placeholder="Digite su rut" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="nom">Nombre: </label><br>
+                <input type="text" id="nom" name="nom" required minlength="3" maxlength="20"
+                     placeholder="Digite nombre.." class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="Ap">Apellido Paterno: </label><br>
+                <input type="text" id="Ap" name="Ap" required minlength="3" maxlength="20"
+                     placeholder="Digite apellido paterno.." class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="Am">Apellido Materno: </label><br>
+                <input type="text" id="Am" name="Am" required minlength="3" maxlength="20"
+                     placeholder="Digite apellido materno.." class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="dates">Fecha de nacimiento</label><br>
+                <input type="date" id="dates" name="dates" required class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="edad">Edad: </label><br>
+                <input type="number" id="edad" name="edad" required  min="18" max="35"
+                     placeholder="Digite edad.." class="form-control">
+            </div>
+          
+
+            <div class="form-group">
+                <label for="genero">Genero: </label><br>
+                <select id="genero" class="form-control">
+                    <option value="0">Seleccione el Genero</option>
+                    <option value="1">Hombre</option>
+                    <option value="2">Mujer</option>
+                    <option value="3">otro...</option>
+                    <option value="4">Terreneitor</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="celular">Digite el numero de su celular: </label><br>
+                <input type="number" id="celular" name="celular" required  minlength="9" maxlength="12"
+                     placeholder="Digite su numero telefonico.." class="form-control">
+            </div>
+
+            <div class="form-group">
+                
+                <textarea id="carta" class="form-control" rows="7" >
+
+                </textarea>
+            </div>
+            <input type="button" value="Crear carta" onclick="crearcarta()" class="btn btn-success" >
+            <input type="reset" value="ingreso" class="btn btn-success" >
+           
+        </form>
+        <hr>
+        
+    
+
+    </div>
+</body>
+</html>

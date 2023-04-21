@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    
+    <h1>Ejemplo de Formulario </h1>
+
+    <form method="post" action="#" enctype="text/plain" name="datos">
+
+        <label for="nom">Digite su nombre: </label>
+        <input type="text" id="nom" placeholder="Nombre de usuario.." 
+            minlength="3" maxlength="50" required> <br>
+        <label for="edad">Digite su edad: </label>
+        <input type="number" id="edad" placeholder="Edad de usuario.."
+            min="14" max="120" required> <br>      
+        <label for="email">Digite su email: </label>
+        <input type="email" id="email" placeholder="Email de usuario.."
+            required><br>
+        <label for="pass">Digite su password:</label>
+        <input type="password" id="pass" placeholder="Password de usuario.."
+            minlength="8" required><br>
+        
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpiar">
+
+    </form>
+
+
+</body>
+</html>

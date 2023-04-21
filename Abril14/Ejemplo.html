@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <title>Formulario</title>
+    <script>
+        /*función que muestra un mensaje de saludo */
+        function Saludar(){
+            alert("Bienvenido a JavaScript");
+        }
+
+        /*función que compara la edad y muestra un mensaje */
+        function Mostrar(){
+            var a=document.getElementById("nom").value;
+            var b= parseInt(document.getElementById("edad").value);
+            if (b>=18){
+                alert("Usted " + a + " es mayor de edad");
+            }
+            else{
+                alert("Usted " + a + " es menor de edad");
+            }
+        }
+
+        /*función que muestra mensaje si es par o impar*/
+        function Verificar(){
+            var a=parseInt(document.getElementById("numero").value);
+            if (a!=0)
+            {
+                if(a%2==0)
+                {
+                    alert ("El número "+ a + " Es par");
+                }
+                else{
+                    alert("El número " + a + " Es impar");
+                }
+            }else{
+                alert("El número ingresado es cero");
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Información Personal</h2>
+        <form action="#"method="post" name="datos">
+            <div class="form-group">
+                <label for="nom">Nombre: </label>
+                <input type="text" id="nom" name="nom" required minlength="3"
+                     placeholder="Digite nombre.." class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="correo">Correo: </label>
+                <input type="email" id="correo" name="correo" required 
+                     placeholder="Digite email.." class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="edad">Edad: </label>
+                <input type="number" id="edad" name="edad" required  min="14" max="100"
+                     placeholder="Digite edad.." class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="comuna">Comuna: </label>
+                <select id="comuna" class="form-control">
+                    <option value="0">Seleccione comuna..</option>
+                    <option value="1">Maipú</option>
+                    <option value="2">Cerrillos</option>
+                    <option value="3">La Florida</option>
+                    <option value="4">Otra comuna</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="comentarios">Cuéntanos como te ayudamos..</label>
+                <textarea rows="5" id="comentarios" class="form-control">
+                    
+                </textarea>
+            </div>
+            <input type="submit" value="Enviar" class="btn btn-success">
+            <input type="reset" value="Limpiar" class="btn btn-primary">
+            <input type="button" value="Saludo" class="btn btn-warning" onclick="Saludar()">
+            <input type="button" value="Mostrar Mensaje" class="btn btn-primary"
+                onclick="Mostrar()">
+        </form>
+        <hr>
+        <h3>Ingresar un número y en una función mostrar si es o no un número par</h3>
+        <form action="#" method="post" name="datos2">
+
+            <div class="form-group">
+                <label for="numero">Digite un número</label>
+                <input type="number" id="numero" name="numero" required class="form-control">
+            </div>
+
+          
+        </form>
+
+    </div>
+</body>
+</html>
